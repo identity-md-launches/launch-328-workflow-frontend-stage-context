@@ -1,0 +1,38 @@
+[
+  {
+    "selector": "h1",
+    "foreground": "rgb(36, 43, 37)",
+    "background": "rgb(245, 244, 239)",
+    "ratio": 13.18
+  },
+  {
+    "selector": ".intro h1 span",
+    "foreground": "rgb(98, 104, 93)",
+    "background": "rgb(245, 244, 239)",
+    "ratio": 5.21
+  },
+  {
+    "selector": ".mint-button",
+    "foreground": "rgb(33, 56, 44)",
+    "background": "rgb(215, 237, 146)",
+    "ratio": 9.85
+  },
+  {
+    "selector": ".mint-note",
+    "foreground": "rgb(194, 205, 191)",
+    "background": "rgb(33, 56, 44)",
+    "ratio": 7.67
+  },
+  {
+    "selector": ".row-state",
+    "foreground": "rgb(98, 104, 93)",
+    "background": "rgb(255, 254, 250)",
+    "ratio": 5.69
+  },
+  {
+    "selector": ".label",
+    "foreground": "rgb(98, 104, 93)",
+    "background": "rgb(245, 244, 239)",
+    "ratio": 5.21
+  }
+]

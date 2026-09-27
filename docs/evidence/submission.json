@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-27",
+  "scopeCheck": "PASS: only web/**, dist/**, docs/**; web/.gitignore explicitly budgeted",
+  "existingTrackedFilesChanged": [],
+  "candidateFilesAdded": 44,
+  "candidateFullBundleBytes": 1989407,
+  "bundleLimitBytes": 8388608,
+  "measurementNote": "Full --all bundle from temporary candidate repository; excludes this small report. 65536-byte headroom reserved for this report and final documentation; no bundle or nested repository is submitted.",
+  "conservativeBundleBudgetBytes": 2054943,
+  "nodeModulesCachesArchivesTracked": false,
+  "gitSubmodules": false,
+  "candidateDiffWhitespaceCheck": "PASS",
+  "handoffInputByteEquality": "PASS for deployment.json and network.json",
+  "exportBytes": 517395,
+  "exportAssets": 6,
+  "manifestSha256": "10a92f77c9fda1cadd560fd29c49322339f061390246f840304914d0e51118f0",
+  "inPlaceCommit": "BLOCKED: .git/index.lock could not be created because repository metadata is read-only",
+  "delivery": "Final files remain in the authorized workspace paths for publisher collection; no in-place commit claimed"
+}

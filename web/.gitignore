@@ -1,0 +1,9 @@
+# Explicit scope budget: web/.gitignore only. Patterns apply at every depth in web/.
+node_modules/
+.cache/
+.vite/
+.npm/
+test-results/
+playwright-report/
+*.tgz
+*.tsbuildinfo

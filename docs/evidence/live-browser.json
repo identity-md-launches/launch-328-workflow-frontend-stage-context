@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-27",
+  "mode": "Live read-only RPC; no wallet; no transactions",
+  "url": "http://127.0.0.1:4173/lease/",
+  "state": "Live contract views · block 11,791,681",
+  "viewports": [1440, 390],
+  "mobileDimensions": { "viewport": 390, "document": 390, "body": 390 },
+  "consoleExceptions": [],
+  "failedResponses": [],
+  "missingWallet": "Correct recovery message shown after Connect wallet",
+  "screenshots": ["live-desktop.png", "live-mobile.png"],
+  "browserClosed": true
+}

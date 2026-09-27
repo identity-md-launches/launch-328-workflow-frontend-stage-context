@@ -1,0 +1,30 @@
+{
+  "metrics": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "axeViolations": 0
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "axeViolations": 0
+    }
+  ],
+  "keyboard": "Tab to connect; Enter connects; visible focus screenshot",
+  "textResize": "200% root font size at 768px; no page overflow (not native zoom)",
+  "reducedMotion": "0s button transitions",
+  "consoleErrors": [],
+  "failedResources": [],
+  "note": "Mocked chain and wallet; no real funds or transactions"
+}
