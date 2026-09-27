@@ -1,0 +1,22 @@
+{
+  "kind": "evm_project",
+  "token": {
+    "contract": "LaunchToken",
+    "name": "Lease",
+    "symbol": "LEAS",
+    "decimals": 18
+  },
+  "contracts": [
+    {
+      "contract": "RentableNFT",
+      "constructorArgs": ["$token"]
+    }
+  ],
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "notes": "Lease (LEAS) rental market on Sepolia. Token: src/LaunchToken.sol:LaunchToken, OpenZeppelin ERC-20 named Lease, symbol LEAS, 18 decimals, no constructor arguments; its constructor mints exactly 1,000,000,000 LEAS (10^27 minor units) once to msg.sender, the deploying factory, and exposes no mint, burn, owner, pause or upgrade path. Application contract: src/RentableNFT.sol:RentableNFT, an OpenZeppelin ERC-721 named Lease Keys, symbol LKEY, implementing ERC-4907 (interface 0xad092b5c) with a rental market paid in LEAS. Its only constructor argument is address leas, resolved from $token so token() is the launch token deployed immediately before it; the constructor reverts if that address has no code. RentableNFT holds no LEAS at deploy and never needs any: rent is moved by SafeERC20.safeTransferFrom straight from the renter to the current NFT owner, and the contract has no payable function, receive or fallback. There is no owner, admin, pause, rescue or upgrade role, so no $owner argument is used and no privileged wallet exists; constructor msg.sender receives no authority in either contract. Mint is free, at most 3 per address for life and 3,000 total, ids from 1. Listings are owner-only and are deleted on any ownership change. rent(tokenId, rentalDays, maxPricePerDay) requires 1-30 days, a live listing, no active user, renter != owner and pricePerDay <= maxPricePerDay; cost is pricePerDay * rentalDays. Paid rentals cannot be shortened: setUser only succeeds while userOf is zero, and, deliberately unlike the ERC-4907 reference implementation, transfers never clear an active user. Pool: LEAS against native Sepolia ETH (zero address), fee 3000, tick spacing 60, no hook; initialPrice is the 1:1 sqrtPriceX96 placeholder and the deployer derives the effective opening price from the pinned policy when it specifies initialMarketCapWei. The factory seeds liquidity with the launch token only and supplies the LP and MerkleDistributor; no initialization calls are made after deployment. Supply, allocations, contributor lock and chain selection come from policy and services, not from this manifest."
+}
